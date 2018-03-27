@@ -1,0 +1,257 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AdobeEsign",
+		"_postman_id": "99d01c3f-4080-cd66-4a28-dc1f4aa63ef8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://api.na1.echosign.com/oauth/token",
+			"request": {
+				"url": "http://api.na1.echosign.com/oauth/refresh",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refresh_token",
+							"value": "3AAABLblqZhB7T8EPOZGBp1zi4CII3QaSI6j9GbyAijtubEaV00mHETckumSTT5NepFrmlfqrkSc*",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "CBJCHBCAABAA-SMzXnnrSqtoRd54EfURT6llrkSh1pWF",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "u0iTguD8iaPsmy_KGlTN2Sauz614yjmK",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.echosign.com/oauth/token",
+			"request": {
+				"url": "http://api.echosign.com/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "code",
+							"value": "CBNCKBAAHBCAABAAI_FJmiCDbTtktr6P5NfzREm6cCZ8RvM_",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "CBJCHBCAABAA-SMzXnnrSqtoRd54EfURT6llrkSh1pWF",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "u0iTguD8iaPsmy_KGlTN2Sauz614yjmK",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://play.google.com",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.in1.echosign.com/api/rest/v5/transientDocuments",
+			"request": {
+				"url": "https://api.in1.echosign.com/api/rest/v5/transientDocuments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Access-Token",
+						"value": "3AAABLblqZhCaalyiXIZh5yN4hnlNhxCZZhSH9fKvkXOc_YblTzi4loYvu_-fQuDb5COEO1htrItsDkR75ijSlcZFqRe3bL_I",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "x-api-user",
+						"value": "email:pandimani.subramani@wipro.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "File-Name",
+							"value": "Test.pdf",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "File",
+							"description": "",
+							"type": "file",
+							"src": "Test.pdf"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://secure.na1.echosign.com/public/oauth?redirect_uri=https://play.google.com&\nresponse_type=code&client_id=CBJCHBCAABAA-SMzXnnrSqtoRd54EfURT6llrkSh1pWF&scope=user_login:self",
+			"request": {
+				"url": {
+					"raw": "https://secure.na1.echosign.com/public/oauth?redirect_uri=https://play.google.com&\nresponse_type=code&client_id=CBJCHBCAABAA-SMzXnnrSqtoRd54EfURT6llrkSh1pWF&scope=user_login:self",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"na1",
+						"echosign",
+						"com"
+					],
+					"path": [
+						"public",
+						"oauth"
+					],
+					"query": [
+						{
+							"key": "redirect_uri",
+							"value": "https://play.google.com",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "\nresponse_type",
+							"value": "code",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "CBJCHBCAABAA-SMzXnnrSqtoRd54EfURT6llrkSh1pWF",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "scope",
+							"value": "user_login:self",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.in1.echosign.com:443/api/rest/v5/agreements",
+			"request": {
+				"url": "https://api.in1.echosign.com:443/api/rest/v5/agreements",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Access-Token",
+						"value": "3AAABLblqZhBcIuZJxZWeeiakTEJDLEEYvVkE_ztw5DdmPvZUmnktmUJmW5mWslVypzRdJmJSlGaISW_7df8Fi3bfJsEK0F6F",
+						"description": ""
+					},
+					{
+						"key": "x-api-user",
+						"value": "email:pandimani.subramani@wipro.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"documentCreationInfo\": {\r\n\t\t\"recipientSetInfos\": [{\r\n\t\t\t\"recipientSetRole\": \"SIGNER\",\r\n\t\t\t\"recipientSetMemberInfos\": [{\r\n\t\t\t\t\"email\": \"aditya.srivastava8@wipro.com\"\r\n\t\t\t}]\r\n\t\t}],\r\n\t\t\"signatureFlow\": \"SENDER_SIGNATURE_NOT_REQUIRED\",\r\n\t\t\"name\": \"Finance Agreement\",\r\n\t\t\"signatureType\": \"ESIGN\",\r\n\t\t\"formFields\": [{\r\n\t\t\t\"receipientIndex\": 0,\r\n\t\t\t\"name\": \"test\",\r\n\t\t\t\"inputType\": \"TEXT_FIELD\",\r\n\t\t\t\"locations\": [{\r\n\t\t\t\t\"pageNumber\": \"1\",\r\n\t\t\t\t\"top\": \"200\",\r\n\t\t\t\t\"left\": \"100\",\r\n\t\t\t\t\"width\": \"200\",\r\n\t\t\t\t\"height\": \"100\"\r\n\t\t\t}],\r\n\t\t\t\"fontSize\": 12,\r\n\t\t\t\"contentType\": \"SIGNER_FIRST_NAME\",\r\n\t\t\t\"required\": true\r\n\t\t}],\r\n\t\t\"fileInfos\": [{\r\n\t\t\t\"transientDocumentId\": \"3AAABLblqZhA_8VdYbcbNf2SXiXAnRNjTHpdfwqC3X3duuifjhaUHqWFkrXi4QDDUoAC9ZNidBl0EirSPzNvm_MYEld6UeGKUu4kjm4_Nz6YWjnP9IQRg7QUoBEVYnvEtkHFEN8ZD-ekTgPTlAMkmJMnjng8QJ53HdrIpJaDSfDjDfwbyYQJweRRdVK4oHBguwliDr96ZeuH-C98TjzjLdCYA2Opf-KXNMkpeDB8NXoW1zkeBEcP2Z1ZOS_nGqoY0ukXZBDuLXvtNi7e5U7QZ56-GqXaMhpjUlLBxLEnHPplO-25dJ6L5wRPgisPjeWx5Qu23n_VaVZY*\"\r\n\t\t}],\r\n\t\t\"message\": \"Please sign this.\",\r\n\t\t\"securityOptions\": {\r\n\t\t\t\"passwordProtection\": \"NONE\",\r\n\t\t\t\"kbaProtection\": \"NONE\",\r\n\t\t\t\"webIdentiyProtection\": \"NONE\",\r\n\t\t\t\"externalPassword\": \"\",\r\n\t\t\t\"portectOpen\": false,\r\n\t\t\t\"internalPassword\": \"\",\r\n\t\t\t\"openPassword\": \"\"\r\n\t\t}\r\n\t}\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.in1.echosign.com:443/api/rest/v5/agreements/3AAABLblqZhDIwBPhlpm01-zgH6MzsZiYM-P9t87ltwpgEkRbHaAxnEw7-5Jqqt-VKylaYJEu9KzBJvl7iJ5_BFZ6aQYlo5O7",
+			"request": {
+				"url": "https://api.in1.echosign.com:443/api/rest/v5/agreements/3AAABLblqZhDIwBPhlpm01-zgH6MzsZiYM-P9t87ltwpgEkRbHaAxnEw7-5Jqqt-VKylaYJEu9KzBJvl7iJ5_BFZ6aQYlo5O7",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Access-Token",
+						"value": "3AAABLblqZhAHtVHw1Fx7d7_Ziea3N92BB80ja32kQHc9ONoCl0Dw8i9IoqDud0NtrXANi-po6RHga2F3UcpJ8wJVq1XeQaGX",
+						"description": ""
+					},
+					{
+						"key": "x-api-user",
+						"value": "email:pandimani.subramani@wipro.com",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
