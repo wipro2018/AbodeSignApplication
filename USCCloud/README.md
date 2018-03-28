@@ -1,0 +1,2 @@
+# CloudContentCloudAPIs
+# OracleCloudContentAPI
